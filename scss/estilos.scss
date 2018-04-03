@@ -13,7 +13,7 @@ a{
 }
 
 h1,h2,h3,h4,p,li,span,a{
-        font-family: $fuente-principal;
+    font-family: $fuente-principal;
 }
 
 .entero{
@@ -25,16 +25,4 @@ h1,h2,h3,h4,p,li,span,a{
 .medio{
     width: 92%;
     max-width: 1344px;
-}
-.titulo{
-    text-align: center;
-    width: 100%;
-    span{
-        &:first-child{
-            color: $color-primario;
-        }
-        &:last-child{
-            color: $color-secundario;
-        }
-    }
 }

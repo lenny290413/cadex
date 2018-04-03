@@ -1,24 +1,22 @@
-$color-primario: #00e65d;
-$color-secundario:#F76E2B;
-$verde-oscuro: #F76E2B;
-$colo-hover:#F3FA57; 
-$gris-suave:#707070;
-$gris-fondo:#D9DBDA;
-$fuente-principal: 'Merriweather', serif;
-$fuente-corrida: 'Great Vibes', cursive;
+$azul-suave: #5283BB;
+$azul-duro:#242E79;
+$rojo-vino: #991C27;
+$borde-plomo:#EFEFEF; 
+$fondo:#F8F8F8;
+$fuente-principal: 'Raleway', sans-serif;
 
-@mixin display(){
+@mixin display{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-@mixin absolute(){
+@mixin absolute{
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
 }
-@mixin pseudoelementos(){
+@mixin pseudoelementos{
     content: "";
 }
