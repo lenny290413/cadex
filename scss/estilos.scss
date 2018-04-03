@@ -1,0 +1,40 @@
+@import "_lg-reset";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1,h2,h3,h4,p,li,span,a{
+        font-family: $fuente-principal;
+}
+
+.entero{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.medio{
+    width: 92%;
+    max-width: 1344px;
+}
+.titulo{
+    text-align: center;
+    width: 100%;
+    span{
+        &:first-child{
+            color: $color-primario;
+        }
+        &:last-child{
+            color: $color-secundario;
+        }
+    }
+}

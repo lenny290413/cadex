@@ -1,0 +1,116 @@
+@import "_lg-reset";
+header {
+    background: white;
+    height: 100px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    box-shadow: 3px 1px 3px black;
+    z-index: 99999999999999;
+    .medio {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+    }
+}
+
+.logo {
+    width: 400px;
+}
+
+.menu {
+    @include display();
+    height: 100%;
+    a {
+        padding: 10px;
+        height: 100%;
+        @include display;
+        cursor: pointer;
+        transition: all .3s;
+    
+        li {
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            transition: all .3s;
+                color: $color-secundario;
+        }
+        &:hover {
+            background: $colo-hover;
+            transition: all .3s;
+            li {
+                color: $color-secundario;
+                transition: all .3s;
+                
+            }
+        }
+    }
+}
+.icon-bars{
+    display: none;
+}
+@media screen and (max-width:818px){
+    header{
+        height: 100px;
+        z-index: 9999;
+        position: fixed;
+    }
+    .menu{
+        position: absolute;
+        flex-direction: column;
+       height: auto;
+        width: 100%;
+        top: -500%;
+        left: 0;
+        z-index: 100;
+        background:white;
+        background-size: cover;
+        justify-content: flex-start;
+       /* 
+        */
+        transition:all .5s;
+        a{
+            height: auto;
+            width: 100%;
+            text-align: left;
+            border-bottom: 1px solid rgba(black,.5);
+            li{
+                width: 100%;
+                text-align: left
+            }
+
+        }
+    }
+    .icon-bars{
+        display: block;
+        font-size: 30px;
+        color: $color-secundario;
+        cursor: pointer;
+    }
+    .movimiento{
+        top: 102px;
+        transition:all .5s;
+    }
+    
+}
+
+@media screen and (max-width:450px){
+    .logo{
+        width: 280px;
+    }
+}
+    
+
+@media screen and (max-width:400px){
+    .logo{
+        width: 200px;
+    }
+}
+    
+@media screen and (max-width:369px){
+    .logo{
+        width: 190px;
+    }
+}
+  

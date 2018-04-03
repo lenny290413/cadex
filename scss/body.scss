@@ -1,0 +1,433 @@
+@import "_lg-reset";
+.modal{
+    position: fixed;
+    z-index: 99999999999;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: rgba(black,.6);
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .3s;
+    
+    .medio{
+        height: 60%;
+        background: white;
+        display: flex;
+        img{
+            height: 100%;
+            width: 50%;
+            object-fit: cover;
+        }
+    }
+}
+.mostrar_modal{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    opacity: 1;
+    
+    transition: all .3s;
+}
+.info_modal{
+    padding: 10px;
+    h3{
+        margin: 5px;
+        color: $color-secundario;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba($color-primario,.5);
+    }
+    p{
+        margin: 5px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+.text {
+    text-align: center;
+    background: $gris-fondo;
+
+    padding: 10px;
+    .medio {
+        h1 {
+            font-size: 20px;
+        }
+    }
+}
+
+.nosotros {
+    margin: 50px 0;
+    .medio {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.nosotros_items {
+    flex: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    i {
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    h3 {
+        color: $color-secundario;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgba($color-primario, .4);
+    }
+    p {
+        margin-top: 5px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+.objetivo {
+    .medio {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+}
+
+.objetivo_items {
+    width: 25%;
+    margin: 5px;
+    flex: auto;
+    .objetivo_imagen {
+        width: 100%;
+        height: 280px;
+        position: relative;
+        overflow: hidden;
+        transition: all .3s;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+    }
+    h3 {
+        text-align: center;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    &:hover {
+        .objetivo_texto {
+            top: 0;
+            transition: all .3s;
+
+        }
+
+    }
+}
+
+.objetivo_texto {
+    @include absolute();
+    background: rgba($color-primario, .6);
+    padding: 10px;
+    top: -200%;
+    transition: all .3s;
+
+    li {
+        font-size: 10px;
+        padding: 3px;
+        color: white;
+    }
+}
+
+.slogan {
+    margin: 25px 0;
+    background-image: url(../imagenes/slogan.jpg);
+    height: 300px;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    .medio {
+        p {
+            position: relative;
+            z-index: 100;
+            color: white;
+            font-family: $fuente-corrida;
+            font-size: 50px;
+            text-align: center;
+        }
+    }
+    &::after {
+        @include pseudoelementos();
+        @include absolute();
+        background: rgba(black, .5);
+        z-index: 2;
+    }
+}
+
+.team {
+    .medio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+.team_item {
+    margin-top: 20px !important;
+    width: 20%;
+    margin: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    
+    h3{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: $verde-oscuro;
+        width: 100%;
+    }
+    h4{
+        font-size: 12px;
+        text-align: center;
+        margin: 4px 0;
+        color: rgba(black,.4);
+        width: 100%;
+    }
+    p{
+        text-align: center;
+        font-size: 12px;
+        width: 100%;
+        margin: 5px 0;
+        line-height: 20px;
+    }
+    span{
+        width: 100%;
+        @include display;
+        i{
+            color: white;
+            width: 35px;
+            height: 35px;
+            background: $verde-oscuro;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 50%;
+            @include display;
+        }
+    }
+    a{
+        margin: 10px 0;
+        color: black;
+        border: 1px solid $verde-oscuro;
+        padding: 8px 15px;
+        font-family: $fuente-principal;
+        font-weight: bold;
+    }
+}
+
+.team_imagen {
+    position: relative;
+    width: 100%;
+    height: 250px;
+   
+    img {
+        width: 98%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+         border: 1px solid white;
+    }
+    &::after {
+        @include absolute;
+        @include pseudoelementos;
+        background: $verde-oscuro;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 50px;
+        top: 8px;
+        z-index: -1;
+    }
+}
+.galeria,.colaboradores,.formulario{
+    .medio{
+        display: flex;
+        flex-direction: column;
+        h2{
+            margin: 40px 0;
+        }
+    }
+}
+.carrusel_items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+     border: 1px solid #ccc ;
+    box-shadow: inset 1px -5px 0px 1px #ccc;
+    img{
+        width: 120px !important;
+    }
+}
+.carrusel_items_galeria{
+    height: 200px;
+   
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.formulario{
+    background: $gris-fondo;
+    margin: 30px 0;
+    padding: 20px;
+}
+.formulario_item{
+    display: flex;
+    form{
+        width: 50%;
+        display: flex; 
+        flex-direction: column;
+        flex: auto;
+        input,textarea{
+            padding: 8px;
+            margin: 5px;
+        }
+        textarea{
+            min-height: 200px;
+        }
+        button{
+            display: block;
+            width: 50%;
+            margin: 5px;
+            padding: 8px;
+            background: $color-secundario;
+            color: white;
+            border: 0;
+            border: 1px solid white;
+            border-radius: 4px;
+        }
+    }
+}
+.derecha{
+    width: 40%;
+    margin-left: 20px;
+    span{
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        i{
+            margin-right: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:890px){
+    .team_item{
+        width: 40%;
+        flex: none;
+    }
+    .slogan{
+        .medio{
+            p{
+                font-size: 30px;
+            }
+        }
+    }
+}
+@media screen and (max-width:818px) {
+    .text {
+        .medio {
+            h1 {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .nosotros_items {
+        width: 40%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .objetivo_items {
+        width: 45%;
+        margin: 5px;
+    }
+    .formulario_item{
+        flex-direction: column;
+        form{
+        width: 100% ;
+    }
+    }
+    .derecha{
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .modal{
+        .medio{
+            flex-direction: column;
+            height: 85%;
+            align-items: center;
+            img{
+                height: 40%;
+                margin-top: 10px;
+            }
+        }
+    }
+    .info_modal{
+        h3{
+            text-align: center;
+            font-size: 14px;    
+        }
+        p{
+            line-height: 15px;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .text {
+        .medio {
+            h1 {
+                font-size: 12px;
+            }
+        }
+    }
+    .nosotros_items {
+        width: 100%;
+    }
+    .objetivo_items {
+        width: 100%;
+    }
+     .team_item{
+        width: 100%;
+        flex: auto;
+    }
+    .team_imagen{
+        width: 70%;
+        height: 200px;
+    }
+    .modal{
+         .medio{
+             height: 93vh;
+             img{
+              height: 180px !important;
+
+             }
+    }   
+    }
+    .info_modal{
+        p{
+            font-size: 10px;
+        }
+    }
+
+}
