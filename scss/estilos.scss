@@ -26,3 +26,27 @@ h1,h2,h3,h4,p,li,span,a{
     width: 92%;
     max-width: 1344px;
 }
+body{
+    background: $fondo;
+}
+.titulo{ 
+    margin-top: 20px;  
+    margin-bottom: 20px; 
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $borde-plomo;
+    position: relative;
+    width: 100%;
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        height: 5px;
+        width: 20%;
+        background: $azul-suave;
+        left: 0;
+        z-index: 99;
+        border-radius: 10px;
+    }
+}
