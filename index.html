@@ -5,11 +5,14 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700"/>
-    <link rel="stylesheet" href="css/menu.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
     <link rel="stylesheet" href="css/estilos.css"/>
+    <link rel="stylesheet" href="css/menu.css"/>
+    <link rel="stylesheet" href="css/slider.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"> </script>
   </head>
   <header class="entero">
-    <div class="medio"><a class="logo" href="/"><img class="logo_img" src="imagenes/logo.png"/></a><i class="icon-bars" id="btn-menu"></i>
+    <div class="medio"><a class="logo" href="/"><img class="logo_img" src="imagenes/logo.png"/></a><i class="icon-menu" id="btn-menu"></i>
       <ul class="menu nav" id="menu"><a data-title="Inicio" href="/">
           <li>Inicio</li></a><a data-title="Calamar" href="/calamar.html">
           <li>Calamar</li></a><a data-title="Pescados" href="/pescados.html">
@@ -17,5 +20,23 @@
           <li>Contactanos</li></a></ul>
     </div>
   </header>
-  <body></body>
+  <body> 
+    <div class="slider">
+      <div class="slider_content">
+        <div class="slider_items"><img src="imagenes/slider/slider_1.jpeg"/>
+          <p class="texto_slider">Cadena de Exportacion de Calidad</p>
+        </div>
+        <div class="slider_items"><img src="imagenes/slider/slider_2.jpg"/>
+          <p class="texto_slider">Cadena de Exportacion de Calidad</p>
+        </div>
+        <div class="slider_items"><img src="imagenes/slider/slider_3.jpg"/>
+          <p class="texto_slider">Cadena de Exportacion de Calidad</p>
+        </div>
+        <div class="slider_items"><img src="imagenes/slider/slider_4.jpg"/>
+          <p class="texto_slider">Cadena de Exportacion de Calidad</p>
+        </div>
+      </div><i class="icon-izquierda btn_slider"></i><i class="icon-derecha btn_slider"></i>
+    </div>
+    <script src="js/efectos.js"></script>
+  </body>
 </html>

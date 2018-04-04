@@ -1,14 +1,18 @@
 @import "_lg-reset";
 header {
     position: fixed;
-    background: rgba(black, .3);
     top: 0;
     left: 0;
     height: 100px;
+    z-index: 99999999;
     .medio {
         display: flex;
         justify-content: space-between;
     }
+}
+
+.icon-menu {
+    display: none;
 }
 
 .logo {
@@ -28,6 +32,8 @@ header {
 
 .menu {
     display: flex;
+    flex: auto;
+    justify-content: flex-end;
     a {
         margin: 5px;
         padding: 10px;
@@ -43,19 +49,92 @@ header {
             content: attr(data-title);
             position: absolute;
             padding: 10px;
-            left: 0;  
+            left: 0;
             margin-top: 10px;
             background: white;
             color: black;
             transition: all .3s;
-            
+
         }
-        &:hover:after{
+        &:hover:after {
             margin-top: 50px;
             z-index: 10;
             margin-top: 0;
             top: 0 !important;
             transition: all .3s;
+        }
+    }
+}
+
+
+
+@media screen and (max-width:768px) {
+    header {
+        height: 100px;
+        background: rgba(white, .8);
+        border-bottom: 1px solid black;
+    }
+    .logo {
+        height: auto;
+        background: transparent !important;
+        position: relative;
+        padding: 0;
+        border-style: none;
+        img {
+            width: 120px;
+
+        }
+    }
+    .icon-menu {
+        display: block;
+        color: black;
+        font-size: 40px;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        cursor: pointer;
+    }
+    .menu {
+        position: fixed;
+        background: rgba($azul-suave, .8);
+        width: 70%;
+        right: -100%;
+        top: 100px;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: all .3s;
+        a {
+            border-bottom: 1px solid rgba(black, .5);
+            color: white;
+            text-align: center;
+            margin: 0;
+            border-right: 1px solid rgba(white, .5);
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+.movimiento_menu {
+    right: 0;
+    transition: all .3s;
+}
+}
+
+
+@media screen and (max-width:400px) {
+    .menu {
+        a {
+            font-size: 16px;
+            padding: 10px;
+            text-align: left;
+        }
+    }
+    .logo {
+        height: auto;
+
+        img {
+            width: 100px;
         }
     }
 }
