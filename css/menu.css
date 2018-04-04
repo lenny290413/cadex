@@ -1,0 +1,12 @@
+header {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0; }
+  header .medio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }

@@ -1,1 +1,14 @@
 @import "_lg-reset";
+header{ 
+    position: fixed;
+    background: rgba(black,.3);
+    top: 0;
+    left: 0;
+    .medio{
+        display:  flex;
+        justify-content: space-between;
+    }
+}
+.logo{
+    
+}
