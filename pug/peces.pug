@@ -1,0 +1,44 @@
+html
+    head
+        title Cadex Pacifico 
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Raleway:400,700")
+        link(rel="stylesheet", href="css/styles.css")
+        link(rel="stylesheet", href="css/estilos.css")
+        link(rel="stylesheet", href="css/menu.css")
+        link(rel="stylesheet", href="css/slider_seccion.css")
+        link(rel="stylesheet", href="css/card.css")
+        link(rel="stylesheet", href="css/footer.css")
+        script(src="https://code.jquery.com/jquery-1.11.3.min.js") 
+    include menu
+    body   
+        .slider_seccion
+            img(src="imagenes/seccion/pescado.jpg") 
+        .tittle.entero
+            .medio 
+                h1 Pescados
+        .productos.entero
+            .medio
+                .card_group
+                    a.card(href="/calamar")
+                        .card_image
+                            img(src="imagenes/pescados/1.jpg")
+                        .card_info
+                            h2 Pex Perico
+                            p Seccion: Pescados
+                    a.card(href="/calamar")
+                        .card_image
+                            img(src="imagenes/pescados/2.jpg")
+                        .card_info
+                            h2 Pez Merluza
+                            p Seccion: Pescados
+                    a.card(href="/calamar")
+                        .card_image
+                            img(src="imagenes/pescados/3.jpg")
+                        .card_info
+                            h2 Pez Volador
+                            p Seccion: Pescados
+        
+        script(src="js/efectos.js")
+        include footer             

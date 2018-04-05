@@ -1,0 +1,17 @@
+@import "_lg-reset";
+header{
+    background: $azul-duro;
+}
+.slider_seccion{
+    width: 100%; 
+    height: 450px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+h1{
+    text-align: center;
+    margin: 10px 0; 
+} 
