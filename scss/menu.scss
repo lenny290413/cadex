@@ -14,7 +14,9 @@ header {
 .icon-menu {
     display: none;
 }
-
+.efecto-menu{
+    background: rgba(black,.4);
+}
 .logo {
     position: fixed;
     top: 0;
@@ -71,7 +73,7 @@ header {
 @media screen and (max-width:768px) {
     header {
         height: 100px;
-        background: rgba(white, .8);
+        background: rgba(black, .4);
         border-bottom: 1px solid black;
     }
     .logo {
@@ -85,9 +87,9 @@ header {
 
         }
     }
-    .icon-menu {
+    .icon-menu { 
         display: block;
-        color: black;
+        color: white;
         font-size: 40px;
         position: absolute;
         right: 20px;

@@ -1,3 +1,20 @@
+/*FIXED*/
+$(document).ready(function(){
+	var altura = $('.menu-contenedor').offset().top;
+	
+	$(window).on('scroll', function(){
+		if ( $(window).scrollTop() > altura ){
+			$('.menu-contenedor').addClass('efecto-menu');
+		} else {
+			$('.menu-contenedor').removeClass('efecto-menu');
+		}
+	});
+
+});
+
+
+
+/*FIXED END*/
 $('#btn-menu').on('click',function(){
     $('#menu').toggleClass('movimiento_menu');
 }); 
