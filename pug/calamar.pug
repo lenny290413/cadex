@@ -11,71 +11,69 @@ html
         link(rel="stylesheet", href="css/card.css")
         link(rel="stylesheet", href="css/calamar.css")
         link(rel="stylesheet", href="css/footer.css")
+        link(rel="stylesheet", href="css/animate.css")
         script(src="https://code.jquery.com/jquery-1.11.3.min.js") 
     include menu
     body   
-        .slider_seccion
+        .slider_seccion.wow.fadeIn
             img(src="imagenes/seccion/calamar.jpg") 
-        .tittle.entero
+        .tittle.entero.wow.fadeIn
             .medio 
                 h1 Calamares
         .productos.entero
             .medio
                 .card_group
-                    a.card(href="/calamar")
+                    a.card.wow.fadeInUp(href="/calamar/tentaculos-de-pota")
                         .card_image
                             img(src="imagenes/calamar/1.jpg")
                         .card_info
                             h2 Tentaculos de pota
                             p Seccion: Calamar
-                    a.card(href="/calamar")
+                    a.card.wow.fadeInUp(data-wow-delay=".2s",href="/calamar/aleta-de-pota")
                         .card_image
                             img(src="imagenes/calamar/2.jpg")
                         .card_info
                             h2 Aleta de pota
                             p Seccion: Calamar
-                    a.card(href="/calamar")
+                    a.card.wow.fadeInUp(data-wow-delay=".4s",href="/calamar/rodajas-de-pota")
                         .card_image
                             img(src="imagenes/calamar/3.jpg")
                         .card_info
                             h2 Rodajas de pota
                             p Seccion: Calamar
-                    a.card(href="/calamar")
+                    a.card.wow.fadeInUp(data-wow-delay=".6s",href="/calamar/anillas-de-pota")
                         .card_image
                             img(src="imagenes/calamar/4.jpg")
                         .card_info
                             h2 Anillas de pota
                             p Seccion: Calamar
-                    a.card(href="/calamar")
+                    a.card.wow.fadeInUp(data-wow-delay=".8s",href="/calamar/cuello-de-pota")
                         .card_image
                             img(src="imagenes/calamar/5.jpg")
                         .card_info
                             h2 Cuello de pota
                             p Seccion: Calamar
-                    a.card(href="/calamar")
+                    a.card.wow.fadeInUp(data-wow-delay=".2s",href="/calamar/botones-de-pota")
                         .card_image
                             img(src="imagenes/calamar/6.jpg")
                         .card_info
                             h2 Botones de pota
                             p Seccion: Calamar
-                    a.card(href="/calamar")
+                    a.card.wow.fadeInUp(data-wow-delay=".4s",href="/calamar/filete-de-pota")
                         .card_image
                             img(src="imagenes/calamar/7.jpg")
                         .card_info
                             h2 Filete de pota
                             p Seccion: Calamar
-                    a.card(href="/calamar")
+                    a.card.wow.fadeInUp(data-wow-delay=".6s",href="/calamar/calamar-entero")
                         .card_image
-                            img(src="imagenes/calamar/calamar_1.jpg")
+                            img(src="imagenes/calamar/8.jpg")
                         .card_info
                             h2 Calamar entero
                             p Seccion: Calamar
-                    a.card(href="/calamar")
-                        .card_image
-                            img(src="imagenes/calamar/.jpg")
-                        .card_info
-                            h2 Aleta de pota
-                            p Seccion: Calamar
-        
+                    
         script(src="js/efectos.js")
+        script(src="js/wow.min.js")
+        script.
+            new WOW().init();
         include footer             

@@ -11,56 +11,57 @@ html
         link(rel="stylesheet", href="css/body.css")
         link(rel="stylesheet", href="css/card.css")
         link(rel="stylesheet", href="css/footer.css")
+        link(rel="stylesheet", href="css/animate.css")
         script(src="https://code.jquery.com/jquery-1.11.3.min.js") 
     include menu
     body 
         include slider 
         .proceso.entero
             .medio
-                p.titulo Nuestro Proceso
-                .proceso_items.pescas
+                p.titulo.wow.fadeIn Nuestro Proceso
+                .proceso_items.pescas.wow.bounceInUp(data-wow-delay=".2s") 
                     span 1
                     .proceso_items_info
                         h3 Pescas
                         p Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. E
-                .proceso_items.transporte
+                .proceso_items.transporte.wow.bounceInUp(data-wow-delay=".4s") 
                     span 2
                     .proceso_items_info
                         h3 Transporte
                         p Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. E
-                .proceso_items.proceso
+                .proceso_items.proceso.wow.bounceInUp(data-wow-delay=".6s") 
                     span 3
                     .proceso_items_info
                         h3 Proceso
                         p Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. E
-                .proceso_items.exportacion
+                .proceso_items.exportacion.wow.bounceInUp(data-wow-delay=".8s") 
                     span 4
                     .proceso_items_info
                         h3 Exportacion
                         p Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. E
         .productos.entero
             .medio
-                p.titulo Nuestros Productos
+                p.titulo.wow.fadeIn Nuestros Productos
                 .card_group
-                    a.card(href="/calamar")
+                    a.card.wow.bounceInUp(data-wow-delay=".2s",href="/calamar/tentaculos-de-pota")
                         .card_image
                             img(src="imagenes/calamar/1.jpg")
                         .card_info
                             h2 Tentaculos de pota
                             p Seccion: Calamar
-                    a.card(href="/calamar")
+                    a.card.wow.bounceInUp(data-wow-delay=".4s",href="/calamar/aleta-de-pota")
                         .card_image
                             img(src="imagenes/calamar/2.jpg")
                         .card_info
                             h2 Aleta de pota
                             p Seccion: Calamar
-                    a.card(href="/calamar")
+                    a.card.wow.bounceInUp(data-wow-delay=".6s",href="/calamar/rodajas-de-pota")
                         .card_image
                             img(src="imagenes/calamar/3.jpg")
                         .card_info
                             h2 Rodajas de pota
                             p Seccion: Calamar
-                    a.card(href="/calamar")
+                    a.card.wow.bounceInUp(data-wow-delay=".8s",href="/calamar/anillas-de-pota")
                         .card_image
                             img(src="imagenes/calamar/4.jpg")
                         .card_info
@@ -70,19 +71,19 @@ html
         .productos.entero
             .medio
                 .card_group
-                    a.card(href="/calamar")
+                    a.card.wow.bounceInUp(data-wow-delay=".2s",href="/pescados/perico")
                         .card_image
                             img(src="imagenes/pescados/1.jpg")
                         .card_info
                             h2 Pex Perico
                             p Seccion: Pescados
-                    a.card(href="/calamar")
+                    a.card.wow.bounceInUp(data-wow-delay=".4s",href="/pescados/merluza")
                         .card_image
                             img(src="imagenes/pescados/2.jpg")
                         .card_info
                             h2 Pez Merluza
                             p Seccion: Pescados
-                    a.card(href="/calamar")
+                    a.card.wow.bounceInUp(data-wow-delay=".6s",href="/pescados/pez-volador")
                         .card_image
                             img(src="imagenes/pescados/3.jpg")
                         .card_info
@@ -90,4 +91,7 @@ html
                             p Seccion: Pescados
                 a.calamares_button(href="/peces") Ver Peces
         script(src="js/efectos.js")
+        script(src="js/wow.min.js")
+        script.
+            new WOW().init();
         include footer

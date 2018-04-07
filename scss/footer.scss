@@ -1,64 +1,70 @@
 @import "_lg-reset";
-footer{
+footer {
     background: #EFEFEF;
     margin-top: 20px;
-    .medio{
+    .medio {
         display: flex;
-        padding: 10px;    
+        padding: 10px;
     }
 }
-.primer,.segundo,.tercer{
+
+.primer,
+.segundo,
+.tercer {
     flex: auto;
-    display: flex; 
+    display: flex;
     flex-direction: column;
 }
-.primer{
+
+.primer {
     @include display;
-    img{
+    img {
         width: 200px;
     }
 }
-.segundo{
-    a{
+
+.segundo {
+    a {
         color: black;
         margin: 8px 0;
-        border-bottom: 1px solid rgba($azul-duro,.6);
+        border-bottom: 1px solid rgba($azul-duro, .6);
         padding-bottom: 5px;
-        &:last-child{
-            
-        }
+        &:last-child {}
     }
 }
-.tercer{
+
+.tercer {
     display: flex;
     flex-direction: column;
     margin-left: 10px !important;
-    a{
+    a {
         color: black;
         margin: 8px 0;
-        border-bottom: 1px solid rgba($azul-duro,.6);
+        border-bottom: 1px solid rgba($azul-duro, .6);
         padding-bottom: 5px;
     }
 }
-.titulo_footer{
+
+.titulo_footer {
     font-weight: bold;
-    color: $azul-duro; 
-        margin: 8px 0;
+    color: $azul-duro;
+    margin: 8px 0;
 }
-.ultimo{
+
+.ultimo {
     background: $azul-suave;
-    .medio{
+    .medio {
         display: flex;
         justify-content: space-between;
         padding: 10px;
-        h2{ 
-            font-size: 16px; 
+        h2 {
+            font-size: 16px;
             color: white;
         }
-        span{
+        span {
             display: flex;
             color: white;
-            a{
+            a {
                 margin-left: 5px;
                 color: white;
                 font-weight: bold;
@@ -67,21 +73,44 @@ footer{
     }
 }
 
-@media screen and (max-width:700px){
-    .segundo{
+@media screen and (max-width:700px) {
+    .segundo {
         display: none;
     }
 }
-@media screen and (max-width:500px){
-    footer{
-        .medio{
+
+@media screen and (max-width:500px) {
+    footer {
+        .medio {
             flex-direction: column;
         }
-    } 
-    .segundo{
+    }
+    .segundo {
         display: flex;
     }
-    .tercer{
+    .tercer {
         margin: 0 !important;
     }
+}
+
+@media screen and (max-width:400px) {
+    .ultimo {
+        .medio {
+            flex-direction: column;
+            span {
+                margin-top: 10px;
+            }
+        }
+    }
+    .slider_seccion {
+        margin-top: 100px;
+        height: 200px;
+    }
+    h1{
+        margin: 20px 0;
+    }
+    .info{
+        margin: 0;
+    }
+
 }

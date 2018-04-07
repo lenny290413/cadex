@@ -10,30 +10,31 @@ html
         link(rel="stylesheet", href="css/slider_seccion.css")
         link(rel="stylesheet", href="css/card.css")
         link(rel="stylesheet", href="css/footer.css")
+        link(rel="stylesheet", href="css/animate.css")
         script(src="https://code.jquery.com/jquery-1.11.3.min.js") 
     include menu
     body   
-        .slider_seccion
+        .slider_seccion.wow.fadeIn
             img(src="imagenes/seccion/pescado.jpg") 
-        .tittle.entero
+        .tittle.entero.wow.fadeIn
             .medio 
                 h1 Pescados
         .productos.entero
             .medio
                 .card_group
-                    a.card(href="/calamar")
+                    a.card.wow.fadeInUp(data-wow-delay=".2s",href="/pescados/perico")
                         .card_image
                             img(src="imagenes/pescados/1.jpg")
                         .card_info
-                            h2 Pex Perico
+                            h2 Pez Perico
                             p Seccion: Pescados
-                    a.card(href="/calamar")
+                    a.card.wow.fadeInUp(data-wow-delay=".4s",href="/pescados/merluza")
                         .card_image
                             img(src="imagenes/pescados/2.jpg")
                         .card_info
                             h2 Pez Merluza
                             p Seccion: Pescados
-                    a.card(href="/calamar")
+                    a.card.wow.fadeInUp(data-wow-delay=".6s",href="/pescados/pez-volador")
                         .card_image
                             img(src="imagenes/pescados/3.jpg")
                         .card_info
@@ -41,4 +42,7 @@ html
                             p Seccion: Pescados
         
         script(src="js/efectos.js")
+        script(src="js/wow.min.js")
+        script.
+            new WOW().init();
         include footer             

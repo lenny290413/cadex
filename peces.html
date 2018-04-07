@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/slider_seccion.css"/>
     <link rel="stylesheet" href="css/card.css"/>
     <link rel="stylesheet" href="css/footer.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"> </script>
   </head>
   <header class="entero menu-contenedor">
@@ -23,25 +24,25 @@
     </div>
   </header>
   <body>  
-    <div class="slider_seccion"><img src="imagenes/seccion/pescado.jpg"/></div>
-    <div class="tittle entero">
+    <div class="slider_seccion wow fadeIn"><img src="imagenes/seccion/pescado.jpg"/></div>
+    <div class="tittle entero wow fadeIn">
       <div class="medio"> 
         <h1>Pescados</h1>
       </div>
     </div>
     <div class="productos entero">
       <div class="medio">
-        <div class="card_group"><a class="card" href="/calamar">
+        <div class="card_group"><a class="card wow fadeInUp" data-wow-delay=".2s" href="/pescados/perico">
             <div class="card_image"><img src="imagenes/pescados/1.jpg"/></div>
             <div class="card_info">
-              <h2>Pex Perico</h2>
+              <h2>Pez Perico</h2>
               <p>Seccion: Pescados</p>
-            </div></a><a class="card" href="/calamar">
+            </div></a><a class="card wow fadeInUp" data-wow-delay=".4s" href="/pescados/merluza">
             <div class="card_image"><img src="imagenes/pescados/2.jpg"/></div>
             <div class="card_info">
               <h2>Pez Merluza</h2>
               <p>Seccion: Pescados</p>
-            </div></a><a class="card" href="/calamar">
+            </div></a><a class="card wow fadeInUp" data-wow-delay=".6s" href="/pescados/pez-volador">
             <div class="card_image"><img src="imagenes/pescados/3.jpg"/></div>
             <div class="card_info">
               <h2>Pez Volador</h2>
@@ -50,7 +51,9 @@
       </div>
     </div>
     <script src="js/efectos.js"></script>
-    <footer class="entero">
+    <script src="js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+    <footer class="entero wow fadeInUp">
       <div class="medio">
         <div class="primer"><a class="logo_footer" href="/"><img src="imagenes/logo.png"/></a></div>
         <div class="segundo">
