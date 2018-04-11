@@ -1,0 +1,35 @@
+@import "_lg-reset";
+h1{
+    margin-top: 20px;
+}
+.formulario{
+    margin-top: 20px;
+    .medio{
+        background: white;
+        border: 1px solid $borde-plomo;
+        padding: 10px;
+        
+    }
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; 
+    input,textarea,button{
+        margin: 5px;
+        padding: 10px;
+        width: 80%;
+    }
+    textarea{
+        min-height: 200px;
+    }
+}
+
+@media screen and (max-width:768px){
+    form{
+        input,textarea,button{
+            width: 100%;
+        }
+    }
+}

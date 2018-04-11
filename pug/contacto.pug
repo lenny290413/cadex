@@ -1,0 +1,29 @@
+html
+    head
+        title Cadex Pacifico 
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Raleway:400,700")
+        link(rel="stylesheet", href="css/styles.css")
+        link(rel="stylesheet", href="css/estilos.css")
+        link(rel="stylesheet", href="../css/menu.css")
+        link(rel="stylesheet", href="../css/internos.css")
+        link(rel="stylesheet", href="css/footer.css") 
+        link(rel="stylesheet", href="css/animate.css")
+        link(rel="stylesheet", href="css/contacto.css")
+        script(src="https://code.jquery.com/jquery-1.11.3.min.js") 
+    include menu_seccion
+    body 
+        .slider_seccion.wow.fadeIn
+            img(src="imagenes/contacto.jpg") 
+        .formulario.entero
+            .medio
+                h1 Contactanos
+                form
+                    input(type="text",placeholder="Nombre")
+                    input(type="text",placeholder="Telefono")
+                    input(type="text",placeholder="Asunto")
+                    textarea(placeholder="Mensaje")
+                    button Enviar
+        script(src="js/efectos.js")
+        include footer

@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.fondo {
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+
+.encima {
+  position: absolute;
+  width: 90%;
+  max-width: 1344px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .encima .cuatro {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    text-align: center; }
+  .encima .found {
+    font-size: 40px;
+    color: white;
+    font-weight: bolder;
+    font-family: "Raleway", sans-serif;
+    margin: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+    text-align: center; }
+  .encima .manda {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    text-align: center; }
+  .encima a {
+    background: #242E79;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white; }
+
+@media screen and (max-width: 768px) {
+  .encima .cuatro {
+    font-size: 30px; }
+  .encima .found {
+    font-size: 30px; }
+  .logo {
+    width: 200px; } }
